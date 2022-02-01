@@ -122,7 +122,7 @@ def loop2():
         os.system("xdg-open https://github.com/spider863644")
         t.sleep(1)
         exit()
-    cont = input(redyellow + "Do you wanna scan another website [y/n] ")
+    cont = input(redyellow + "Do you wanna scan another website [y/n] " + white)
     if cont == "y" or cont == "Y":
         loop2()
 loop2()

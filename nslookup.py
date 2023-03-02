@@ -8,7 +8,7 @@ try:
 except:
     print("Running requirements.txt...")
     t.sleep(3)
-    os.system("pip install -r requirement.txt")
+    os.system("pip install -r requirements.txt")
 finally:
     print("Requirement installed successfully 😊")
 from update_check import isUpToDate, update
@@ -17,7 +17,7 @@ def loop():
     os.system("clear")
     head = pyfiglet.figlet_format("NS-Lookup")
     print(Fore.YELLOW + head)
-    print(Fore.RED + " Version 2.0".center(60))
+    print(Fore.RED + " Version 2.1".center(60))
     print("")
     print(Fore.MAGENTA + "[+] " + Fore.CYAN+ "Created by " + Fore.GREEN +" Spider Anongreyhat " + Fore.MAGENTA + "[+]")
     print(Fore.YELLOW + """
@@ -57,7 +57,7 @@ def loop():
             t.sleep(2)
             loop()
         else:
-            print(Fore.RED + "NS-LOOKUP is outdated, would you like to updste it?")
+            print(Fore.RED + "NS-LOOKUP is outdated, would you like to update it?")
             update = input("").capitalize()
             if update == "YES":
                 update("nslookup.py",  "https://raw.githubusercontent.com/spider863644/NS-LOOKUP/main/nslookup.py")
@@ -71,4 +71,5 @@ def loop():
         exit()
     else:
         print(Fore.RED + """Invalid option, kindly wear glasses and Input a valid alphabet from the list of options""")
+        loop()
 loop()

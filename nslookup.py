@@ -15,8 +15,14 @@ from update_check import isUpToDate, update
 from colorama import *
 def loop():
     os.system("clear")
-    head = pyfiglet.figlet_format("NS-Lookup")
-    print(Fore.YELLOW + head)
+    #head = pyfiglet.figlet_format("NS-Lookup")
+    print(Fore.YELLOW + """
+     _______    _________         .____    ________   ________   ____  __.____ _____________ 
+ \      \  /   _____/         |    |   \_____  \  \_____  \ |    |/ _|    |   \______   \
+ /   |   \ \_____  \   ______ |    |    /   |   \  /   |   \|      < |    |   /|     ___/
+/    |    \/        \ /_____/ |    |___/    |    \/    |    \    |  \|    |  / |    |    
+\____|__  /_______  /         |_______ \_______  /\_______  /____|__ \______/  |____|    
+        \/        \/                  \/       \/         \/        \/                   """)
     print(Fore.RED + " Version 2.1".center(60))
     print("")
     print(Fore.MAGENTA + "[+] " + Fore.CYAN+ "Created by " + Fore.GREEN +" Spider Anongreyhat " + Fore.MAGENTA + "[+]")
@@ -71,5 +77,6 @@ def loop():
         exit()
     else:
         print(Fore.RED + """Invalid option, kindly wear glasses and Input a valid alphabet from the list of options""")
+        t.sleep(2)
         loop()
 loop()

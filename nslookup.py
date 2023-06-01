@@ -68,12 +68,16 @@ def loop():
             loop()
         else:
             print(Fore.RED + "NS-LOOKUP is outdated, would you like to update it?")
-            update = input("").capitalize()
-            if update == "YES":
+            updatte = input("YES\\NO: ").capitalize()
+            if updatte == "Yes":
                 update("nslookup.py",  "https://raw.githubusercontent.com/spider863644/NS-LOOKUP/main/nslookup.py")
                 print(Fore.GREEN + "Updated\n\nRun script again")
+                
                 t.sleep(2)
                 exit()
+            else:
+            	print(Fore.RED + "You skipped updating")
+            	exit()
     elif option == "D":
         os.system("xdg-open https://github.com/spider863644")
         loop()

@@ -3,7 +3,6 @@ import os
 import time as t
 try:
     import colorama
-    import pyfiglet
     import update_check
 except:
     print("Running requirements.txt...")
@@ -23,7 +22,7 @@ def loop():
 /    |    \/        \ /_____/ |    |___/    |    \/    |    \    |  \|    |  / |    |    
 \____|__  /_______  /         |_______ \_______  /\_______  /____|__ \______/  |____|    
         \/        \/                  \/       \/         \/        \/                   """)
-    print(Fore.RED + " Version 2.1".center(60))
+    print(Fore.RED + " Version 2.2".center(60))
     print("")
     print(Fore.MAGENTA + "[+] " + Fore.CYAN+ "Created by " + Fore.GREEN +" Spider Anongreyhat " + Fore.MAGENTA + "[+]")
     print(Fore.YELLOW + """
@@ -36,11 +35,16 @@ def loop():
     option = str(input(Fore.GREEN + "$ ")).capitalize()
     if option == "A":
         hostname = input(Fore.CYAN + "Enter url: ")
-        if "www" not in hostname:
-            print(Fore.RED + "please add www to the url \n")
-            t.sleep(3)
-            loop()
-        lookup = socket.gethostbyname(hostname)
+      #  if "www" not in hostname:
+#            print(Fore.RED + "please add www to the url \n")
+#            t.sleep(3)
+#            loop()
+        try:
+            lookup = socket.gethostbyname(hostname)
+        except:
+            print(Fore.RED + "Hostname is invalid or couldn\'t find hostname")
+            t.sleep(2)
+            exit()
         print(Fore.MAGENTA + "Getting " + hostname + " Ip address\n")
         t.sleep(3)
         print(Fore.YELLOW + "Hostname: " + Fore.GREEN + str(hostname))
